@@ -1,0 +1,9 @@
+/* "Photo needed" placeholders: impossible to miss while photos are outstanding */
+.admonition.photo-needed { border-left-color: #c98500; background: color-mix(in srgb, #c98500 8%, transparent); }
+.admonition.photo-needed > .admonition-title { background: color-mix(in srgb, #c98500 18%, transparent); }
+.admonition.photo-needed > .admonition-title::before { background-color: #c98500; }
+/* step lists read like a procedure */
+.nn-steps > ol > li { margin-bottom: .6rem; }
+
+/* Long image names in tables wrap instead of widening the table on phones. */
+table.docutils code.literal { overflow-wrap: anywhere; word-break: break-word; }

@@ -2,4 +2,4 @@
 
 The nn user manual
 
-The first release lands here soon.
+Part of nn. Licence: see LICENSE.
