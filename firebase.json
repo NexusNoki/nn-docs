@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "nexnok-docs",
+    "public": "build/html",
+    "ignore": ["firebase.json", "**/.*", ".buildinfo", "objects.inv.gz"],
+    "cleanUrls": false,
+    "headers": [
+      { "source": "**/*.html", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] }
+    ]
+  }
+}

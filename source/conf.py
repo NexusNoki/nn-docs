@@ -77,8 +77,8 @@ todo_link_only = True   # the todo list links to each entry, never prints local 
 
 html_theme = "furo"
 html_title = "nn documentation"
-# where the public manual lives (canonical links); the web page is https://www.hexnok.com
-html_baseurl = os.environ.get("NN_DOCS_BASEURL", "https://docs.hexnok.com/")
+# where the public manual lives (canonical links); the web page is https://www.nexnok.com
+html_baseurl = os.environ.get("NN_DOCS_BASEURL", "https://docs.nexnok.com/")
 html_static_path = ["_static"]
 html_css_files = ["nn.css"]
 html_theme_options = {

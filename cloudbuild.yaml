@@ -1,0 +1,19 @@
+# Cloud Build: runs on every push to the public `site` branch and deploys
+# https://docs.nexnok.com (Firebase Hosting site "nexnok-docs").
+steps:
+  - id: build
+    name: python:3.12-slim
+    entrypoint: sh
+    args:
+      - -ec
+      - |
+        python -m venv /tmp/v
+        /tmp/v/bin/pip install -q -r requirements.txt
+        /tmp/v/bin/sphinx-build -a -W --keep-going -b html source build/html
+  - id: deploy
+    name: node:20-slim
+    entrypoint: sh
+    args: ["-ec", "npx -y firebase-tools@13 deploy --only hosting --project $PROJECT_ID --non-interactive"]
+options:
+  logging: CLOUD_LOGGING_ONLY
+timeout: 900s
